@@ -1,0 +1,92 @@
+Last login: Sat Dec 17 08:43:27 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) BIBHUs-MacBook-Air:~ bibhu$ 
+(base) BIBHUs-MacBook-Air:~ bibhu$ python
+Python 3.9.12 (main, Apr  5 2022, 01:53:17) 
+[Clang 12.0.0 ] :: Anaconda, Inc. on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> tup=4,5,6
+>>> tup
+(4, 5, 6)
+>>> nested_tup = (4, 5, 6), (7, 8)
+>>> nested_tup
+((4, 5, 6), (7, 8))
+>>> tuple([4, 0, 2])
+(4, 0, 2)
+>>> tup = tuple('string')
+>>> tup
+('s', 't', 'r', 'i', 'n', 'g')
+>>> tup[0]
+'s'
+>>> tup = tuple(['foo', [1, 2], True])
+>>> tup
+('foo', [1, 2], True)
+>>> tup[0]='fool'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> tup[1].append(3)
+>>> tup
+('foo', [1, 2, 3], True)
+>>> tup[1].delete(3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'delete'
+>>> tup[1].remove(1)
+>>> tup
+('foo', [2, 3], True)
+>>> (4, None, 'foo') + (6, 0) + ('bar',)
+(4, None, 'foo', 6, 0, 'bar')
+>>> ('foo', 'bar') * 4
+('foo', 'bar', 'foo', 'bar', 'foo', 'bar', 'foo', 'bar')
+>>> tup=(4,5,6)
+>>> a,b,c=tup
+>>> b
+5
+>>> a
+4
+>>> c
+6
+>>> 
+>>> tup=4,5,(6,7)
+>>> a,b,(c,d)=tup
+>>> 
+>>> c
+6
+>>> d
+7
+>>> a,b=1,2
+>>> a,b=1,2
+>>> b,a=a,b
+>>> a
+2
+>>> seq=[(1,2,3),(4,5,6),(7,8,9)]
+>>> fora,b,cinseq:
+  File "<stdin>", line 1
+    fora,b,cinseq:
+                  ^
+SyntaxError: invalid syntax
+>>> :
+  File "<stdin>", line 1
+    :
+    ^
+SyntaxError: invalid syntax
+>>> for a,b,c in seq:\
+... print('a={0}, b={1}, c={2}'.format(a, b, c))
+... 
+a=1, b=2, c=3
+a=4, b=5, c=6
+a=7, b=8, c=9
+>>> a=(1,2,2,2,3,4,2)
+>>> a.count()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: tuple.count() takes exactly one argument (0 given)
+>>> a.count
+<built-in method count of tuple object at 0x7fb5d7451d60>
+>>> a.count(2)
+4
+>>> 
